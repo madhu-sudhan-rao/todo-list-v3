@@ -1,0 +1,44 @@
+.tabs-container {
+    .tab-list {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        background: #ebebeb;
+        border-radius: 9px;
+        padding: 1.2px 1.2px 2px 1.1px;
+
+        .tab-option {
+            display: flex;
+            gap: 5px;
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            user-select: none;
+
+
+            &:hover {
+                background-color: #fff;
+                outline: 0.1px solid #9d9d9d81;
+            }
+
+            .label {
+                font-weight: 400;
+                font-size: 15px;
+                color: #000;
+
+
+            }
+
+            .count {
+                font-weight: 400;
+                font-size: 15px;
+                color: #0000007b;
+            }
+        }
+
+        .active {
+            background-color: #fff;
+            outline: 0.1px solid #9d9d9d81;
+        }
+    }
+}

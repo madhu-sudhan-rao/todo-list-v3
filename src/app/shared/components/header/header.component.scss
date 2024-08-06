@@ -1,0 +1,60 @@
+::ng-deep {
+    .mat-toolbar-single-row {
+        background: #fff !important;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 16px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+        border-bottom: .001px solid rgba(118, 118, 118, 0.312);
+
+        span.app-title {
+            color: #00103c;
+            font-style: 'Lexend';
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+    }
+
+    .mat-mdc-menu-panel {
+        min-width: 162px !important;
+        max-width: 280px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        outline: 0;
+        border-radius: 10px !important;
+        background-color: #fff !important;
+        border: 1px solid #ededed;
+        color: #191919;
+        will-change: transform, opacity;
+    }
+
+    .mat-mdc-menu-content {
+        padding: 4px 4px !important;
+    }
+
+    .mat-mdc-menu-item {
+        min-height: 40px !important;
+        border-radius: 8px;
+    }
+
+    .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        flex: 1;
+        white-space: normal;
+        font-family: var(--mat-menu-item-label-text-font);
+        line-height: var(--mat-menu-item-label-text-line-height);
+        font-size: var(--mat-menu-item-label-text-size);
+        letter-spacing: var(--mat-menu-item-label-text-tracking);
+        font-weight: 400 !important;
+        color: #222222 !important;
+    }
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

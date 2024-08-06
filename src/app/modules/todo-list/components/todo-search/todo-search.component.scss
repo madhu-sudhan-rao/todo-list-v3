@@ -1,0 +1,19 @@
+
+::ng-deep {
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background-color: #fff !important;
+        border: 1px solid #ededed;
+    }
+
+    .search-input {
+
+        .mdc-text-field {
+            border-radius: 50px !important;
+        }
+    }
+
+    .mdc-line-ripple {
+        display: none;
+    }
+}
+

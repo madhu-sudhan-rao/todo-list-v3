@@ -1,0 +1,36 @@
+<div class="text-input-wrapper" [formGroup]="formGroup">
+  <div class="input-label-wrapper">
+    <mat-label class="input-label">{{ label }}</mat-label>
+    <mat-form-field class="example-full-width">
+      <ng-container *ngIf="isTextArea">
+
+        <textarea
+          matInput
+          [placeholder]="placeholder"
+          [formControlName]="controlName"
+          [maxlength]="maxLength"
+          (keypress)="numbersOnly ? acceptNumbersOnly($event) : null"
+        ></textarea>
+      </ng-container>
+      <ng-container *ngIf="!isTextArea">
+
+        <input
+          matInput
+          [placeholder]="placeholder"
+          [formControlName]="controlName"
+          [maxlength]="maxLength"
+          (keypress)="numbersOnly ? acceptNumbersOnly($event) : null"
+        />
+      </ng-container>
+
+      @if (suffixIcon) {
+      <mat-icon matSuffix (click)="emitSuffixAction(controlName)">{{
+        suffixIcon
+      }}</mat-icon>
+      } @if (prefixIcon) {
+
+      <mat-icon matPrefix>{{ prefixIcon }}</mat-icon>
+      }
+    </mat-form-field>
+  </div>
+</div>

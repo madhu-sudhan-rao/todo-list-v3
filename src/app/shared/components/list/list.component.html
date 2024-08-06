@@ -1,0 +1,10 @@
+<div class="list-container">
+    <mat-list>
+        @for (option of options; track option) {
+            <mat-list-item (click)="listItemClick(option)">
+                <mat-icon matListItemIcon>content_copy</mat-icon>
+                <div matListItemTitle>{{option.title}}</div>
+            </mat-list-item>
+        }
+    </mat-list>
+</div>

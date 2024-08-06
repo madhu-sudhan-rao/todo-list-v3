@@ -1,0 +1,15 @@
+// TODO: Complete this reusable component
+<div class="alert-container">
+    <div class="alert-message" matSnackLabel>
+        {{message}}
+    </div>
+    <div class="alert-action-button" matSnackBarAction >
+        <app-button
+        [buttonText]="'Close'"
+        [fullButton]="true"
+        ></app-button>
+        <!-- (onButtonClick)="snackBarRef.dismissWithAction()" -->
+
+    </div>
+
+</div>

@@ -1,0 +1,75 @@
+<div class="new-todo-dialog-form-container">
+  <div mat-dialog-title class="new-todo">{{title}}</div>
+
+  <mat-dialog-content>
+    <div class="title-input">
+      <app-text-input
+        [formGroup]="newTodoForm"
+        controlName="title"
+        placeholder="Create new task"
+        label="Title"
+      ></app-text-input>
+    </div>
+
+    <div class="single-row">
+      <div class="tag-selection">
+        <app-select-list
+          label="Tag"
+          [formGroup]="newTodoForm"
+          controlName="tags"
+          [options]="todoCategories"
+          [multiSelect]="true"
+        ></app-select-list>
+      </div>
+
+      <div class="date-time-input">
+        <app-calendar-input
+          label="Date"
+          [formGroup]="newTodoForm"
+          controlName="date"
+          placeholder="Notes..."
+        ></app-calendar-input>
+      </div>
+    </div>
+
+    <div class="single-row">
+      <div class="status-selection">
+        <app-select-list
+          label="Status"
+          [formGroup]="newTodoForm"
+          controlName="status"
+          [options]="statuses"
+        ></app-select-list>
+      </div>
+      <div class="due-period-selection">
+        <app-select-list
+          label="Due Period"
+          [formGroup]="newTodoForm"
+          controlName="due"
+          [options]="duePeriods"
+        ></app-select-list>
+      </div>
+    </div>
+
+    <div class="notes-input">
+      <app-text-input
+        label="Notes"
+        [isTextArea]="true"
+        [formGroup]="newTodoForm"
+        controlName="description"
+      ></app-text-input>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button class="cancel-button" mat-dialog-close>Cancel</button>
+    <button
+      mat-button
+      class="create-button"
+      [mat-dialog-close]="true"
+      (click)="createTodo()"
+    >
+      {{label}}
+    </button>
+  </mat-dialog-actions>
+</div>

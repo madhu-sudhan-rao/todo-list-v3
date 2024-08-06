@@ -1,0 +1,12 @@
+<div class="tabs-container">
+  <div class="tab-list">
+    @for (tabOption of tabOptions; track tabOption.count) {
+        <div class="tab-option" [ngClass]="{
+            'active': tabOption.active === true,
+        }" (click)="selectTab(tabOption.value)">
+        <div class="label">{{ tabOption.viewValue }}</div>
+        <div class="count">{{ tabOption.count }}</div>
+        </div>
+    }
+  </div>
+</div>

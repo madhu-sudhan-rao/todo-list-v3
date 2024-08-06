@@ -1,0 +1,14 @@
+<div class="select-list-container" [formGroup]="formGroup">
+   <section class="input-label-wrapper">
+        <mat-label class="input-label">{{label}}</mat-label>
+        <mat-form-field>
+            <mat-select [formControlName]="controlName" [multiple]="multiSelect">
+                @for (option of options; track $index) {
+                    <mat-option [value]="option.value" [disabled]="option.disable">{{option.viewValue}}</mat-option>
+                }
+    
+            </mat-select>
+        </mat-form-field>
+   </section>
+
+</div>

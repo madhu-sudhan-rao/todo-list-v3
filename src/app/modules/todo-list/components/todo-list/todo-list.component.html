@@ -1,0 +1,24 @@
+<div class="todo-list-container">
+  @defer () {
+  <div class="header">
+    <app-tabs
+      [tabOptions]="tabOptions"
+      (tabChange)="filterTodos($event)"
+    ></app-tabs>
+  </div>
+  <div class="empty-todo-section" *ngIf="checkForEmptyTodos()">
+    <app-empty-todos></app-empty-todos>
+  </div>
+  <div class="todo-list" *ngIf="!checkForEmptyTodos()">
+    <ng-container *ngFor="let todo of todos | async">
+      <app-todo-item
+        [todo]="todo"
+        (statusChange)="updateStatus($event)"
+        (deleteAction)="deleteTodo($event)"
+      ></app-todo-item>
+    </ng-container>
+  </div>
+  } @loading (minimum 500ms) {
+  <app-spinner></app-spinner>
+  }
+</div>

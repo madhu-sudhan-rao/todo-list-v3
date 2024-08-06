@@ -1,0 +1,22 @@
+<div [ngClass]="styleClass">
+  <ng-container *ngIf="onlyIcon">
+    <button mat-fab [matTooltip]="tooltipText" (click)="onClick()">
+      <mat-icon>{{ iconName }}</mat-icon>
+    </button>
+  </ng-container>
+  
+  <ng-container *ngIf="actionButton">
+    <button mat-icon-button [matTooltip]="tooltipText" (click)="onClick()">
+      <mat-icon>{{ iconName }}</mat-icon>
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="fullButton">
+    <button mat-flat-button (click)="onClick()">
+      <div *ngIf="hasIcon">
+        <mat-icon>{{ buttonIcon }}</mat-icon>
+      </div>
+      <div>{{ buttonText }}</div>
+    </button>
+  </ng-container>
+</div>

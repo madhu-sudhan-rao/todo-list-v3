@@ -1,0 +1,23 @@
+.single-row {
+    display: flex;
+    gap: 10px;
+}
+
+
+::ng-deep {
+    .cancel-button.mat-mdc-button:not(:disabled) {
+        color: #000;
+
+        
+        &:hover {
+            color: #000000;
+
+            background: #0000000a;
+        }
+    }
+
+    .create-button.mat-mdc-button:not(:disabled) {
+        color: #ffffff;
+        background: black;
+    }
+}

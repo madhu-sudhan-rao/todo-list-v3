@@ -1,0 +1,46 @@
+::ng-deep {
+    .card-navigate-button {
+        .mat-mdc-fab {
+            background-color: #ffffff;
+            border-radius: 50px;
+            box-shadow: none;
+        }
+
+        .mat-mdc-fab:not(.mdc-fab--extended) {
+            border-radius: 50px;
+
+            &:hover {
+                border-radius: 50px;
+                box-shadow: none;
+            }
+        }
+
+        .mat-mdc-fab:not(.mdc-fab--extended) .mdc-fab__ripple {
+            border-radius: 50px;
+            box-shadow: none;
+        }
+    }
+
+    .share-button {
+        .mat-mdc-unelevated-button:not(:disabled) {
+            background-color: #0029ff;
+            border: 1px solid #0029ff;
+            
+            &:hover {
+                background-color: #0062ff;
+                border: 1px solid #0062ff;
+            }
+        }
+    }
+
+    .action-button {
+        .mat-icon {
+            // color: #b5b5b5;
+            // font-size: 1rem;
+
+            &:hover {
+                color: #ffffff !important;
+            }
+        }
+    }
+}

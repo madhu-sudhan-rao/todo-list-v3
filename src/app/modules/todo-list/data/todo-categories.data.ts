@@ -1,0 +1,17 @@
+export const TODO_CATEGORIES = [
+  { value: 'work', viewValue: 'Work' },
+  { value: 'personal', viewValue: 'Personal' },
+  { value: 'health_fitness', viewValue: 'Health & Fitness' },
+  { value: 'family', viewValue: 'Family' },
+  { value: 'education', viewValue: 'Education' },
+  { value: 'shopping', viewValue: 'Shopping' },
+  { value: 'finance', viewValue: 'Finance' },
+  { value: 'projects', viewValue: 'Projects' },
+  { value: 'household', viewValue: 'Household' },
+  { value: 'hobbies', viewValue: 'Hobbies' },
+  { value: 'travel', viewValue: 'Travel' },
+  { value: 'social', viewValue: 'Social' },
+  { value: 'groceries', viewValue: 'Groceries' },
+  { value: 'urgent', viewValue: 'Urgent' },
+  { value: 'miscellaneous', viewValue: 'Miscellaneous' },
+];

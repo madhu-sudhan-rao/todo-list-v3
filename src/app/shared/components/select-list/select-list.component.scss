@@ -1,0 +1,12 @@
+
+
+::ng-deep {
+    div.mat-mdc-select-panel {
+        background-color: #fff !important;
+    }
+
+    // selected option background color
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+        // background-color: var(--mat-option-selected-state-layer-color);
+    }
+}

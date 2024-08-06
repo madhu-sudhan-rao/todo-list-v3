@@ -1,0 +1,11 @@
+<div class="calendar-input-container" [formGroup]="formGroup">
+    <div class="input-label-wrapper">
+        <mat-label class="input-label">{{label}}</mat-label>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker"  [formControlName]="controlName">
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="todo-item-container" (click)="openEditDialog(todo)">
+  <div class="card-header">
+    <div class="todo-info">
+      <div class="todo-title">
+        {{ todo.title }}
+      </div>
+      <div class="todo-tags">
+        <ng-container *ngFor="let tag of todo.tags">
+          <div class="tag">{{ tag }}</div>
+        </ng-container>
+      </div>
+      <div class="todo-description">
+        {{ todo.description }}
+      </div>
+    </div>
+    <div class="todo-check">
+      <div class="current-status" [matMenuTriggerFor]="statusOptions" (click)="$event.stopPropagation()">
+        <div class="status-name">{{ todo.status }}</div>
+        <div class="drop-icon"><mat-icon>arrow_drop_down</mat-icon></div>
+      </div>
+      <mat-menu #statusOptions>
+        @for (option of statuses; track option.value) {
+            <div class="status-option" mat-menu-item (click)="statusUpdate(option.value, todo.id); $event.stopPropagation()">{{option.viewValue}}</div>      
+        }
+      </mat-menu>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="todo-footer">
+    <div class="todo-due-period">
+      {{ todo.duePeriod }}
+    </div>
+    <div class="todo-delete">
+        <button mat-icon-button (click)="deleteTodo(todo.id); $event.stopPropagation()"><mat-icon>delete</mat-icon></button>
+    </div>
+  </div>
+</div>

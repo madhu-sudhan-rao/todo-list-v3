@@ -1,0 +1,18 @@
+<div class="feature-card">
+  <div class="feature-card__content">
+    <div class="card-title">
+      {{ cardTitle }}
+    </div>
+    <div class="card-body">
+      <div class="card-info">Click here to view</div>
+      <div class="right-arrow btn">
+        <app-button
+          [onlyIcon]="true"
+          iconName="arrow_forward"
+          styleClass="card-navigate-button"
+          (onButtonClick)="onClick()"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
